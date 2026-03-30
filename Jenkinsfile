@@ -21,4 +21,15 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            echo 'this will run every time'
+        }
+        failure {
+            echo 'this will run when there is failure'
+        }
+        success {
+            echo 'this will run when there is success'
+        }
+    }
 }
