@@ -45,7 +45,8 @@ pipeline {
             }
         }
         stage('check params') {
-            sh """
+            steps {
+                sh """
                 echo "Hello ${params.PERSON}"
 
                 echo "Biography: ${params.BIOGRAPHY}"
@@ -56,6 +57,7 @@ pipeline {
 
                 echo "Password: ${params.PASSWORD}"
             """
+            }
         }
     }
     post {
