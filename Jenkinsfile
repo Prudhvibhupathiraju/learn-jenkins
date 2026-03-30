@@ -24,6 +24,7 @@ pipeline {
                 sh """
                     echo "Shell Script"
                     echo $GREETING
+                    env
                 """
             }
         }
