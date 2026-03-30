@@ -7,6 +7,9 @@ pipeline {
     environment {
         GREETING = 'Hello Jenkins'
     }
+    options {
+        timeout(time: 1, unit: 'SECONDS') 
+    }
     stages {
         stage('Build'){
             steps{
@@ -25,6 +28,7 @@ pipeline {
                     echo "Shell Script"
                     echo $GREETING
                     env
+                    sleep 10
                 """
             }
         }
