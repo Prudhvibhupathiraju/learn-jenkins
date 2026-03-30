@@ -40,7 +40,7 @@ pipeline {
                     echo "Shell Script"
                     echo $GREETING
                     env
-                    sleep 10
+                    #sleep 10
                 """
             }
         }
